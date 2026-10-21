@@ -30,7 +30,9 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+
+- [SaaS/Hosted Platforms](#saashosted-platforms)
 
 - [Open-Source GitHub Projects](#open-source-github-projects)
 
@@ -40,56 +42,26 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 
 
+## Sector Overview & Market Dynamics
+
+The global **data lake query engine market** is valued at approximately **$8.7 billion** and is projected to reach **$38.4 billion by 2034** at a CAGR of ~17.9%. The sector is **moderately concentrated** at the top — hyperscalers (Google BigQuery, AWS Athena/Redshift) and scaled pure-plays (Snowflake, Databricks) command the lion's share of revenue, but a healthy long tail of open-source engines (Trino, Presto, DuckDB) and specialized vendors (Starburst, Dremio, StarRocks) keeps competition vigorous and prevents a true winner-take-all dynamic.
+
+
+
 ## SaaS/Hosted Platforms
 
+> Sorted by company scale (descending). Pricing reflects publicly listed starting-tier rates as of October 2026.
 
-
-- **AWS Athena**
-
-  **Serverless interactive analytics service** for querying data in S3 using SQL or Apache Spark. **Pricing**: **$5 per TB scanned** for SQL queries (minimum 10MB per query); **Spark workloads** billed per DPU-hour . **Free tier**: **$5 per TB scanned** applies, but there is no perpetual free tier for Athena itself; AWS Free Tier includes 1 million Lambda requests/month for federated queries . **Best for**: ad-hoc queries on S3 data without infrastructure management.
-
-
-
-- **Starburst Galaxy**
-
-  **Fully managed Trino service** for federated analytics. **Pricing**: **Free tier** includes **3 clusters** with standard execution mode . **Pro at $0.50/credit**; **Enterprise at $0.75/credit**; **Mission-Critical at $1.00/credit** . **Free trial**: **30-day trial** with **$500 in compute credits** and access to Enterprise features . **Best for**: teams wanting managed Trino with a generous free tier.
-
-
-
-- **Dremio Cloud**
-
-  **Fully managed SaaS lakehouse on AWS** with consumption-based pricing (DCUs). Features **Autonomous Reflections**, **Elastic Engines that scale to zero**, and a **hosted MCP server**. **Free trial**: **$400 in credits** with all enterprise features included . **Best for**: teams wanting a managed Iceberg-native lakehouse.
-
-
-
-- **Snowflake**
-
-  **Cloud data warehouse with consumption-based pricing**. **Pricing**: **Standard at $2.00/credit** (AWS US East), **Enterprise at $3.00/credit**, **Business Critical at $4.00/credit** . **Free tier**: **30-day trial** with **$400 in credits**; no perpetual free tier. **Best for**: enterprises wanting a fully managed warehouse with broad ecosystem support.
-
-
-
-- **Google BigQuery**
-
-  **Serverless data warehouse with on-demand and flat-rate pricing**. **Pricing**: **On-demand at $6.25 per TiB scanned** (first 1 TiB/month free); **flat-rate editions** for predictable workloads . **Free tier**: **1 TiB of queries per month** and **10 GB of storage per month** for the lifetime of the project . **Best for**: teams wanting serverless analytics with a meaningful free tier.
-
-
-
-- **Amazon Redshift**
-
-  **Cloud data warehouse with provisioned and serverless options**. **Pricing**: **Provisioned starts at $0.543/hour**; **Redshift Serverless starts at $1.50/hour** (billed per second, 60-second minimum) . **Free tier**: **2-month free trial** with **$300 in credits** for provisioned clusters; Serverless has no perpetual free tier . **Best for**: AWS-native teams wanting a mature MPP warehouse.
-
-
-
-- **Databricks SQL**
-
-  **Serverless and classic SQL warehouses on the lakehouse**. **Pricing**: **Serverless SQL at $0.70/DBU** (includes cloud instance cost); **Classic SQL at $0.55/DBU**; **SQL Pro at $0.22/DBU** (instance costs billed separately) . **Free tier**: **14-day trial** with limited credits; **Community Edition** is free but limited to non-production use . **Best for**: teams already on Databricks wanting SQL analytics on Delta Lake.
-
-
-
-- **Teradata Vantage**
-
-  **Enterprise MPP data warehouse**. **Pricing**: **Quote-only** via Teradata or Azure Marketplace; overage billed at **$0.01/unit** beyond contractual amount . **Free tier**: No free tier; contact sales for evaluation. **Best for**: large enterprises with existing Teradata investments.
-
+| Platform | Description | Pricing (Starting Tier) | Free Tier / Free Trial Limits | Company Scale | Best For |
+|---|---|---|---|---|---|
+| **Google BigQuery** | Serverless data warehouse with on-demand and flat-rate pricing | On-demand: **$6.25 per TiB** scanned; flat-rate editions available for predictable workloads | **Forever free**: 1 TiB queries/month + 10 GB storage/month per project (lifetime, no credit card) | Alphabet — **~$4.1 T market cap**; Google Cloud **$24.8 B quarterly rev** (Q2 2026) | Serverless analytics with a meaningful free tier |
+| **AWS Athena** | Serverless interactive analytics for querying S3 data using SQL or Apache Spark | **$5.00 per TB** scanned (10 MB minimum per query); Spark billed per DPU-hour | **No perpetual free tier**; DDL statements & failed queries free; new AWS accounts can apply general sign-up credits | Amazon — **~$2.8 T market cap**; AWS **$42.2 B quarterly rev** (Q2 2026) | Ad-hoc queries on S3 without infrastructure mgmt |
+| **Amazon Redshift** | Cloud data warehouse with provisioned and serverless options | Provisioned from **$0.543/hr**; Serverless from **$1.50/hr** (per-second billing, 60 s min) | **Trial only**: 2-month free trial with **$300 in credits** for provisioned clusters; no perpetual free tier | Amazon — **~$2.8 T market cap**; AWS **$42.2 B quarterly rev** (Q2 2026) | AWS-native teams wanting a mature MPP warehouse |
+| **Databricks SQL** | Serverless and classic SQL warehouses on the lakehouse | SQL Pro: **$0.22/DBU** (+ instance costs); Classic: **$0.55/DBU**; Serverless: **$0.70/DBU** (instance incl.) | **Trial only**: 14-day trial with limited credits; **Community Edition** free forever but single-node, non-production only | Databricks — **$190 B valuation** (Aug 2026); **$7 B+ revenue run-rate** | Teams on Databricks wanting SQL analytics on Delta Lake |
+| **Snowflake** | Cloud data warehouse with consumption-based pricing | Standard: **$2.00/credit**; Enterprise: **$3.00/credit**; Business Critical: **$4.00/credit** (AWS US East) | **Trial only**: 30-day trial with **$400 in credits** + Enterprise features; no perpetual free tier | Snowflake — **~$105—118 B market cap**; **$5.4 B TTM revenue** | Fully managed warehouse with broad ecosystem support |
+| **Starburst Galaxy** | Fully managed Trino service for federated analytics | Pro: **$0.50/credit**; Enterprise: **$0.75/credit**; Mission-Critical: **$1.00/credit** | **Forever free**: 3 clusters with standard execution mode; **30-day trial** with **$500 in credits** for Enterprise | Starburst Data — **$3.35 B valuation** (Series D); **$100 M+ ARR** | Managed Trino with a generous free tier |
+| **Teradata Vantage** | Enterprise MPP data warehouse | VantageCloud Lake Standard from **$4.80/hr** (~$1.50/TU); Lake+ from **$7.20/hr**; storage ~$23/TB/mo | **Trial only**: ClearScape Analytics Experience — free sandbox with 250+ guided demos, no credit card req'd; no production free tier | Teradata — **~$2.8 B market cap**; **$1.69 B TTM revenue** | Large enterprises with existing Teradata investments |
+| **Dremio Cloud** | Fully managed SaaS lakehouse on AWS with Autonomous Reflections & Elastic Engines | **$0.20/DCU** pay-as-you-go; XS engine ~$6.40/hr, S ~$12.80/hr, M ~$25.60/hr | **Forever free**: Standard tier — ≤10 users, ≤200 tables, ≤1,000 views, engine capped at Small; **Enterprise trial**: $400 credits / 30 days | Dremio — acquired by **SAP** (May 2026); last private valuation **$2 B** | Managed Iceberg-native lakehouse |
 
 
 ## Open-Source GitHub Projects
