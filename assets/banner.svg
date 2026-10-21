@@ -1,0 +1,296 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060913" />
+      <stop offset="50%" stop-color="#0a1026" />
+      <stop offset="100%" stop-color="#050814" />
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.6" />
+    </linearGradient>
+
+    <radialGradient id="glowCyan" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowPurple" cx="80%" cy="70%" r="55%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="centerFocus" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0a1026" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#0a1026" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#060913" stop-opacity="0.2" />
+    </radialGradient>
+
+    <!-- Title Gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="45%" stop-color="#e0f2fe" />
+      <stop offset="70%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Pill Gradients -->
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.07" />
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.15" />
+    </pattern>
+
+    <style>
+      /* CSS Keyframe Animations */
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.75; transform: scale(1.08); }
+      }
+
+      @keyframes streamFlow {
+        0% { stroke-dashoffset: 120; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      @keyframes reverseFlow {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 120; }
+      }
+
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+      }
+
+      @keyframes floatReverse {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(6px); }
+      }
+
+      @keyframes pingDot {
+        0% { r: 3px; opacity: 1; }
+        75%, 100% { r: 12px; opacity: 0; }
+      }
+
+      @keyframes packetRun1 {
+        0% { offset-distance: 0%; opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { offset-distance: 100%; opacity: 0; }
+      }
+
+      @keyframes orbitRotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      /* Animated classes */
+      .ambient-glow-1 {
+        animation: pulseGlow 7s ease-in-out infinite alternate;
+        transform-origin: 240px 120px;
+      }
+      .ambient-glow-2 {
+        animation: pulseGlow 9s ease-in-out infinite alternate 1.5s;
+        transform-origin: 960px 280px;
+      }
+      .stream-line-fast {
+        stroke-dasharray: 8 16;
+        animation: streamFlow 5s linear infinite;
+      }
+      .stream-line-slow {
+        stroke-dasharray: 6 12;
+        animation: streamFlow 9s linear infinite;
+      }
+      .stream-line-reverse {
+        stroke-dasharray: 7 14;
+        animation: reverseFlow 7s linear infinite;
+      }
+      .node-pulse-1 {
+        animation: pulseGlow 3s ease-in-out infinite alternate;
+        transform-origin: center;
+      }
+      .node-pulse-2 {
+        animation: pulseGlow 4s ease-in-out infinite alternate 1s;
+        transform-origin: center;
+      }
+      .float-pill-1 {
+        animation: floatSlow 4.5s ease-in-out infinite;
+      }
+      .float-pill-2 {
+        animation: floatSlow 5.2s ease-in-out infinite 0.8s;
+      }
+      .float-pill-3 {
+        animation: floatSlow 4.8s ease-in-out infinite 1.6s;
+      }
+      .float-pill-4 {
+        animation: floatSlow 5.5s ease-in-out infinite 2.2s;
+      }
+      .orbit-group {
+        animation: orbitRotate 30s linear infinite;
+        transform-origin: 600px 210px;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Plate with Border -->
+  <rect x="2" y="2" width="1196" height="416" rx="20" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="2" />
+
+  <!-- Background Ambient Lights -->
+  <rect x="2" y="2" width="1196" height="416" rx="20" fill="url(#glowCyan)" class="ambient-glow-1" />
+  <rect x="2" y="2" width="1196" height="416" rx="20" fill="url(#glowPurple)" class="ambient-glow-2" />
+
+  <!-- Geometric Grid Layer -->
+  <rect x="2" y="2" width="1196" height="416" rx="20" fill="url(#grid)" />
+
+  <!-- DYNAMIC BACKGROUND LAYER: Distributed Query Flow Lines (Underneath Text) -->
+  <g opacity="0.65">
+    <!-- Left Engine Cluster Data Pipes -->
+    <path d="M 60,80 C 180,80 180,180 320,180" fill="none" stroke="#38bdf8" stroke-width="1.8" class="stream-line-fast" stroke-opacity="0.7" />
+    <path d="M 80,140 C 200,140 220,230 360,230" fill="none" stroke="#818cf8" stroke-width="1.5" class="stream-line-slow" stroke-opacity="0.6" />
+    <path d="M 50,220 C 180,220 200,280 340,280" fill="none" stroke="#c084fc" stroke-width="1.5" class="stream-line-reverse" stroke-opacity="0.6" />
+    <path d="M 100,320 C 220,320 240,240 380,240" fill="none" stroke="#38bdf8" stroke-width="1.2" class="stream-line-slow" stroke-opacity="0.5" />
+
+    <!-- Right Engine Cluster Data Pipes -->
+    <path d="M 1140,80 C 1020,80 1020,180 880,180" fill="none" stroke="#38bdf8" stroke-width="1.8" class="stream-line-reverse" stroke-opacity="0.7" />
+    <path d="M 1120,140 C 1000,140 980,230 840,230" fill="none" stroke="#c084fc" stroke-width="1.5" class="stream-line-fast" stroke-opacity="0.6" />
+    <path d="M 1150,220 C 1020,220 1000,280 860,280" fill="none" stroke="#818cf8" stroke-width="1.5" class="stream-line-slow" stroke-opacity="0.6" />
+    <path d="M 1100,320 C 980,320 960,240 820,240" fill="none" stroke="#38bdf8" stroke-width="1.2" class="stream-line-reverse" stroke-opacity="0.5" />
+
+    <!-- Cross Interconnect Waves (Bottom & Top Ambient) -->
+    <path d="M 220,370 Q 600,330 980,370" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 8" stroke-opacity="0.4" class="stream-line-slow" />
+    <path d="M 280,50 Q 600,90 920,50" fill="none" stroke="#a855f7" stroke-width="1" stroke-dasharray="4 8" stroke-opacity="0.3" class="stream-line-reverse" />
+  </g>
+
+  <!-- Topological Distributed Node Badges (Left & Right Flanks) -->
+  <!-- Left Side Nodes: Query Coordinator & MPP Workers -->
+  <g transform="translate(60, 60)" class="float-pill-1">
+    <circle cx="20" cy="20" r="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="20" cy="20" r="6" fill="#38bdf8" class="node-pulse-1" />
+    <text x="44" y="24" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="1">COORDINATOR</text>
+  </g>
+
+  <g transform="translate(50, 130)" class="float-pill-2">
+    <circle cx="20" cy="20" r="12" fill="#0f172a" stroke="#818cf8" stroke-width="1.5" />
+    <circle cx="20" cy="20" r="5" fill="#818cf8" />
+    <text x="42" y="24" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">MPP WORKER 01</text>
+  </g>
+
+  <g transform="translate(40, 210)" class="float-pill-3">
+    <circle cx="20" cy="20" r="12" fill="#0f172a" stroke="#c084fc" stroke-width="1.5" />
+    <circle cx="20" cy="20" r="5" fill="#c084fc" class="node-pulse-2" />
+    <text x="42" y="24" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">MPP WORKER 02</text>
+  </g>
+
+  <g transform="translate(70, 290)" class="float-pill-1">
+    <rect x="0" y="0" width="128" height="30" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <circle cx="16" cy="15" r="4" fill="#34d399" />
+    <text x="28" y="19" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Iceberg / Delta</text>
+  </g>
+
+  <!-- Right Side Nodes: Catalog, Storage & Lakehouse -->
+  <g transform="translate(1000, 60)" class="float-pill-2">
+    <circle cx="140" cy="20" r="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="140" cy="20" r="6" fill="#38bdf8" class="node-pulse-2" />
+    <text x="45" y="24" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="1">CATALOG / METASTORE</text>
+  </g>
+
+  <g transform="translate(1010, 130)" class="float-pill-1">
+    <circle cx="130" cy="20" r="12" fill="#0f172a" stroke="#c084fc" stroke-width="1.5" />
+    <circle cx="130" cy="20" r="5" fill="#c084fc" />
+    <text x="45" y="24" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">FEDERATED SOURCE</text>
+  </g>
+
+  <g transform="translate(1020, 210)" class="float-pill-3">
+    <circle cx="120" cy="20" r="12" fill="#0f172a" stroke="#818cf8" stroke-width="1.5" />
+    <circle cx="120" cy="20" r="5" fill="#818cf8" class="node-pulse-1" />
+    <text x="32" y="24" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">COLUMNAR STORAGE</text>
+  </g>
+
+  <g transform="translate(1000, 290)" class="float-pill-4">
+    <rect x="0" y="0" width="138" height="30" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <circle cx="16" cy="15" r="4" fill="#38bdf8" />
+    <text x="28" y="19" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">S3 / ADLS / GCS</text>
+  </g>
+
+  <!-- CENTER FOREGROUND SHIELD (Ensures 100% foreground clarity & contrast for Title & Subtitle) -->
+  <rect x="220" y="55" width="760" height="280" rx="24" fill="url(#centerFocus)" />
+  <rect x="230" y="65" width="740" height="260" rx="20" fill="#060913" fill-opacity="0.45" stroke="#38bdf8" stroke-opacity="0.12" stroke-width="1" />
+
+  <!-- FOREGROUND CONTENT: Header Tag, Title, Subtitle, Highlights -->
+  <!-- 1. Top Curated Pill Badge -->
+  <g transform="translate(600, 105)">
+    <!-- Centered pill using offset -->
+    <rect x="-180" y="-16" width="360" height="32" rx="16" fill="url(#badgeGrad)" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1" />
+    <!-- Glowing indicator dot -->
+    <circle cx="-158" cy="0" r="4.5" fill="#38bdf8" class="node-pulse-1" />
+    <text x="-144" y="4" fill="#bae6fd" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" letter-spacing="2.2">CURATED ECOSYSTEM DIRECTORY</text>
+    <circle cx="158" cy="0" r="3.5" fill="#a855f7" />
+  </g>
+
+  <!-- 2. Main Title (Crisp, High-Contrast Foreground) -->
+  <text x="600" y="172" text-anchor="middle" fill="url(#titleGrad)" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif" font-size="39" font-weight="800" letter-spacing="-0.5" style="filter: drop-shadow(0 4px 18px rgba(56, 189, 248, 0.25));">
+    Distributed SQL Query Engines
+  </text>
+
+  <!-- 3. Subtitle (Readable, Clean) -->
+  <text x="600" y="210" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif" font-size="15.5" font-weight="500" letter-spacing="0.2">
+    Massive Parallel Processing (MPP)  •  Federated Queries  •  Lakehouse Analytics
+  </text>
+
+  <!-- 4. Secondary Description Line -->
+  <text x="600" y="238" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif" font-size="13" font-weight="400">
+    Trino • Presto • DuckDB • ClickHouse • Spark SQL • TiDB • CockroachDB • Cloud Warehouses
+  </text>
+
+  <!-- 5. Feature Architecture Badges / Metric Pills in Lower Foreground Area (No Overlap with Title/Subtitle) -->
+  <g transform="translate(245, 272)">
+    <!-- Pill 1: Federated SQL -->
+    <g class="float-pill-1" transform="translate(0, 0)">
+      <rect x="0" y="0" width="158" height="34" rx="17" fill="url(#pillGrad)" stroke="#0284c7" stroke-width="1" stroke-opacity="0.7" />
+      <text x="18" y="21" font-size="14">🌐</text>
+      <text x="40" y="21" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">Federated SQL</text>
+    </g>
+
+    <!-- Pill 2: MPP Architecture -->
+    <g class="float-pill-2" transform="translate(176, 0)">
+      <rect x="0" y="0" width="170" height="34" rx="17" fill="url(#pillGrad)" stroke="#6366f1" stroke-width="1" stroke-opacity="0.7" />
+      <text x="16" y="21" font-size="14">⚡</text>
+      <text x="38" y="21" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">MPP Architecture</text>
+    </g>
+
+    <!-- Pill 3: Open Lakehouse -->
+    <g class="float-pill-3" transform="translate(364, 0)">
+      <rect x="0" y="0" width="166" height="34" rx="17" fill="url(#pillGrad)" stroke="#a855f7" stroke-width="1" stroke-opacity="0.7" />
+      <text x="16" y="21" font-size="14">🏛️</text>
+      <text x="38" y="21" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">Open Lakehouse</text>
+    </g>
+
+    <!-- Pill 4: Sub-Second OLAP -->
+    <g class="float-pill-4" transform="translate(548, 0)">
+      <rect x="0" y="0" width="162" height="34" rx="17" fill="url(#pillGrad)" stroke="#10b981" stroke-width="1" stroke-opacity="0.7" />
+      <text x="16" y="21" font-size="14">🚀</text>
+      <text x="38" y="21" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">Sub-Second OLAP</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Status Bar -->
+  <g transform="translate(400, 395)">
+    <circle cx="0" cy="0" r="3" fill="#38bdf8" />
+    <text x="12" y="3.5" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="500">High-Performance Query Execution &amp; Lakehouse Ecosystem</text>
+    <circle cx="400" cy="0" r="3" fill="#818cf8" />
+  </g>
+</svg>

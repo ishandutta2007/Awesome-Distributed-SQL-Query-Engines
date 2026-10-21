@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Distributed SQL Query Engines Banner" width="100%" />
+</p>
+
 # ⚡ Awesome-Distributed-SQL-Query-Engines
 
 <p align="center">
