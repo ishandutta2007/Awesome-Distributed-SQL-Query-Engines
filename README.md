@@ -165,101 +165,198 @@ Your encouragement and support keep this project accurate, fresh, and continuous
 *Let's make Distributed SQL Query Engines more open, performant, and federated!* 🌐
 # Awesome-Distributed-SQL-Query-Engines
 
-# Top Distributed SQL Query Engines Ecosystem
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**
-*Focused on Federated Queries, Lakehouse Analytics & Massive Parallel Processing*
-**Last updated: October 2026**
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Distributed SQL Query Engines**. These tools enable organizations to query massive datasets across data lakes, warehouses, and databases—from federated engines that read data where it lives to MPP warehouses that optimize storage and compute together.
-
-**Examples** include Trino, Presto, AWS Athena, Starburst Galaxy, Dremio Cloud, Snowflake, Google BigQuery, Amazon Redshift, Databricks SQL, and Teradata Vantage (the category leaders).
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, federated querying, and open lakehouse infrastructure—ideal for data engineers, analysts, and organizations seeking transparent, vendor-independent SQL analytics.
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-- **[AWS Athena](https://aws.amazon.com/athena/)**
-  **Serverless interactive analytics service** for querying data in S3 using SQL or Apache Spark. **Pricing**: **$5 per TB scanned** for SQL queries (minimum 10MB per query) . **Free tier**: No perpetual free tier—$5/TB applies from the first byte; AWS Free Tier does not cover Athena query costs. **Best for**: ad-hoc queries on S3 data without infrastructure management.
-
-- **[Starburst Galaxy](https://www.starburst.io/)**
-  **Fully managed Trino service** for federated analytics. **Pricing**: **Pro at $0.50/credit**; **Enterprise at $0.75/credit**; **Mission-Critical at $1.00/credit** . **Free tier**: **Free forever with 3 clusters** and standard execution mode for ad-hoc queries . **Free trial**: **30-day trial** with **$500 in compute credits** and Enterprise-tier features . **Best for**: teams wanting managed Trino with a genuinely usable free tier.
-
-- **[Dremio Cloud](https://www.dremio.com/)**
-  **Fully managed SaaS lakehouse on AWS** with consumption-based pricing (DCUs). Features **Autonomous Reflections**, **Elastic Engines that scale to zero**, and a **hosted MCP server**. **Free trial**: **$400 in credits** with all enterprise features included, no credit card required, account preserved 30 days after trial . **Best for**: teams wanting a managed Iceberg-native lakehouse.
-
-- **[Snowflake](https://www.snowflake.com/)**
-  **Cloud data warehouse with consumption-based pricing**. **Pricing**: **Standard at $2.00/credit** (AWS US East), **Enterprise at $3.00/credit**, **Business Critical at $4.00/credit** . **Free tier**: **30-day trial** with **$400 in credits**; no perpetual free tier. **Best for**: enterprises wanting a fully managed warehouse with broad ecosystem support.
-
-- **[Google BigQuery](https://cloud.google.com/bigquery)**
-  **Serverless data warehouse with on-demand and flat-rate pricing**. **Pricing**: **On-demand at $6.25 per TiB scanned**; **flat-rate editions** for predictable workloads. **Free tier**: **1 TiB of queries per month** and **10 GB of storage per month** for the lifetime of the project . **Best for**: teams wanting serverless analytics with a meaningful perpetual free tier.
-
-- **[Amazon Redshift](https://aws.amazon.com/redshift/)**
-  **Cloud data warehouse with provisioned and serverless options**. **Pricing**: **Provisioned starts at $0.543/hour**; **Redshift Serverless starts at $0.375 per RPU-hour** (60-second minimum), roughly **$1.50/hour at the 4-RPU base** . **Free tier**: **2-month free trial** with **$300 in credits** for provisioned clusters; Serverless has no perpetual free tier. **Best for**: AWS-native teams wanting a mature MPP warehouse.
-
-- **[Databricks SQL](https://www.databricks.com/)**
-  **Serverless and classic SQL warehouses on the lakehouse**. **Pricing**: **Serverless SQL at $0.70/DBU** (includes cloud instance cost) ; **Classic SQL** and **SQL Pro** tiers available at lower DBU rates with separate instance billing. **Free tier**: **14-day trial** with limited credits; **Community Edition** is free but limited to non-production use. **Best for**: teams already on Databricks wanting SQL analytics on Delta Lake.
-
-- **[Teradata Vantage](https://www.teradata.com/)**
-  **Enterprise MPP data warehouse**. **Pricing**: **Quote-only** via Teradata or Azure Marketplace; overage billed at **$0.01/unit** beyond contractual amount. **Free tier**: **Teradata Vantage Express** is a free, fully functional VM image for local testing and development ; **ClearScape Analytics Experience** provides a free hosted instance for testing . **Best for**: large enterprises with existing Teradata investments.
-
-## Open-Source GitHub Projects
-
-- **[Trino](https://github.com/trinodb/trino)**
-  **Distributed SQL query engine for big data** (Apache-2.0) — **the federated query standard**. **13,217 GitHub stars** . **Connects to 40+ data sources** including Hive, Iceberg, Delta Lake, PostgreSQL, MySQL, Kafka, and Elasticsearch—**query data where it lives without moving it**. **Release 484** (October 2026) adds **Parquet selected-positions pushdown** for selective filters, **S3 checksum configuration**, and **DuckDB/Elasticsearch connector improvements**. **The reference implementation for federated SQL**—**choose when you need to query across heterogeneous sources without ETL**.
-
-- **[Presto (PrestoDB)](https://github.com/prestodb/presto)**
-  **Distributed SQL query engine for big data** (Apache-2.0) — **the original Presto implementation**. **16,700+ GitHub stars** . **Created at Facebook** and now maintained by the Presto Foundation. **The trade-off**: **JVM-only stacks (including both Trino and Presto) are an order of magnitude slower than native engines like DuckDB and ClickHouse** for single-node analytics. **Best for**: teams already committed to the Presto ecosystem or needing Facebook-scale heritage.
-
-- **[Apache Calcite](https://github.com/apache/calcite)**
-  **Dynamic data management framework** (Apache-2.0) — **the SQL parser and optimizer beneath many engines**. Provides **SQL parsing, validation, and query optimization** for Trino, Dremio, and others. **Best for**: developers building custom query engines.
-
-- **[Apache Doris](https://github.com/apache/doris)**
-  **Real-time analytical database** (Apache-2.0) — **the MySQL-compatible OLAP choice**. **15,046 GitHub stars** . **Sub-second queries** on large datasets with lakehouse federation. **Best for**: real-time dashboards and interactive analytics.
-
-- **[DuckDB](https://github.com/duckdb/duckdb)**
-  **In-process analytical database** (MIT) — **the single-node benchmark leader**. **36,510 GitHub stars** . **Benchmarks show native/vectorized engines like DuckDB achieve substantially lower runtimes than JVM-only stacks** on single-node workloads. **Best for**: local analytics and embedded query workloads.
-
-- **[Velox](https://github.com/facebookincubator/velox)**
-  **C++ vectorized database acceleration library** (Apache-2.0) — **the engine behind Velox-accelerated Presto**. **4,200 GitHub stars** . Delivers order-of-magnitude speedups over JVM stacks. **Best for**: teams building or accelerating query engines.
-
-### Additional Strong Open-Source Options
-
-- **[StarRocks](https://github.com/StarRocks/starrocks)** — **High-performance OLAP database** (Apache-2.0). **Sub-second queries on data lake and warehouse** with materialized views and CBO optimizer. **Best for**: teams wanting fast queries directly on Iceberg/Delta/Hudi.
-- **[Apache Arrow](https://github.com/apache/arrow)** — **Columnar in-memory format** (Apache-2.0). **The data exchange standard** beneath DuckDB, Velox, and modern engines.
-- **[ClickHouse](https://github.com/ClickHouse/ClickHouse)** — **Column-oriented OLAP database** (Apache-2.0). **The fastest single-node analytics engine** in benchmark comparisons.
-- Community **n8n** workflows for query result alerting and analytics pipeline automation.
-
-**Frameworks for building custom systems**: Combine **Trino** for federated queries with **DuckDB** for single-node analytics, **Apache Doris** for real-time OLAP, and **Apache Calcite** for custom engine development—creating a comprehensive distributed SQL stack.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- Distributed SQL query engines handling enterprise data must comply with data protection regulations (GDPR, CCPA, etc.) and implement appropriate access controls.
-- **The "federated vs. warehouse" distinction matters.** **Trino, Presto, and Athena** query data where it lives—no ETL, no data movement. **Snowflake, BigQuery, Redshift, and Databricks SQL** are warehouses—they store and query data together, optimizing for their own storage format. **Choose federated engines when you have data sprawl; choose warehouses when you control the data lifecycle.**
-- **The JVM performance gap is real for single-node workloads.** **Benchmarks show native/vectorized engines (DuckDB, ClickHouse, Velox-Presto) deliver up to an order of magnitude lower runtimes than JVM-only stacks (Trino, Spark SQL)** on single-node analytics. **But for distributed, federated queries across petabytes, Trino's breadth of connectors and maturity often outweigh raw speed.**
-- **Starburst Galaxy's free tier is genuinely usable.** **3 clusters free forever** with standard execution mode . **The 30-day trial with $500 in credits** lets you evaluate Enterprise features without commitment. **Compare against Athena's $5/TB scanned model**—for moderate workloads, Galaxy's credit model may be more predictable.
-- **BigQuery's perpetual free tier is the most generous among warehouses.** **1 TiB of queries and 10 GB storage per month, forever** . **Redshift's 2-month trial with $300 credits** is time-bound. **Snowflake and Databricks offer trials only**—no perpetual free tier.
-- Self-hosted open-source solutions require proper cluster management, connector configuration, and ongoing maintenance. **Query engines are infrastructure**—budget for tuning and monitoring regardless of platform choice.
-
----
-
-**Made for data engineers, analysts, and organizations building transparent distributed SQL solutions.**  
+## Top Distributed SQL Query Engines Ecosystem
+
+
+
+**Curated List of SaaS Products & Open-Source GitHub Projects**
+
+*Focused on Federated Queries, Lakehouse Analytics & Massive Parallel Processing*
+
+**Last updated: October 2026**
+
+
+
+This repository tracks notable **SaaS platforms** and **open-source projects** for **Distributed SQL Query Engines**. These tools enable organizations to query massive datasets across data lakes, warehouses, and databases—from federated engines that read data where it lives to MPP warehouses that optimize storage and compute together.
+
+
+
+**Examples** include Trino, Presto, AWS Athena, Starburst Galaxy, Dremio Cloud, Snowflake, Google BigQuery, Amazon Redshift, Databricks SQL, and Teradata Vantage (the category leaders).
+
+
+
+**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, federated querying, and open lakehouse infrastructure—ideal for data engineers, analysts, and organizations seeking transparent, vendor-independent SQL analytics.
+
+
+
+Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
+
+
+
+## Table of Contents
+
+- [SaaS/Hosted Platforms](#saas-hosted-platforms)
+
+- [Open-Source GitHub Projects](#open-source-github-projects)
+
+- [How to Contribute](#how-to-contribute)
+
+- [Disclaimer](#disclaimer)
+
+
+
+## SaaS/Hosted Platforms
+
+
+
+- **[AWS Athena](https://aws.amazon.com/athena/)**
+
+  **Serverless interactive analytics service** for querying data in S3 using SQL or Apache Spark. **Pricing**: **$5 per TB scanned** for SQL queries (minimum 10MB per query) . **Free tier**: No perpetual free tier—$5/TB applies from the first byte; AWS Free Tier does not cover Athena query costs. **Best for**: ad-hoc queries on S3 data without infrastructure management.
+
+
+
+- **[Starburst Galaxy](https://www.starburst.io/)**
+
+  **Fully managed Trino service** for federated analytics. **Pricing**: **Pro at $0.50/credit**; **Enterprise at $0.75/credit**; **Mission-Critical at $1.00/credit** . **Free tier**: **Free forever with 3 clusters** and standard execution mode for ad-hoc queries . **Free trial**: **30-day trial** with **$500 in compute credits** and Enterprise-tier features . **Best for**: teams wanting managed Trino with a genuinely usable free tier.
+
+
+
+- **[Dremio Cloud](https://www.dremio.com/)**
+
+  **Fully managed SaaS lakehouse on AWS** with consumption-based pricing (DCUs). Features **Autonomous Reflections**, **Elastic Engines that scale to zero**, and a **hosted MCP server**. **Free trial**: **$400 in credits** with all enterprise features included, no credit card required, account preserved 30 days after trial . **Best for**: teams wanting a managed Iceberg-native lakehouse.
+
+
+
+- **[Snowflake](https://www.snowflake.com/)**
+
+  **Cloud data warehouse with consumption-based pricing**. **Pricing**: **Standard at $2.00/credit** (AWS US East), **Enterprise at $3.00/credit**, **Business Critical at $4.00/credit** . **Free tier**: **30-day trial** with **$400 in credits**; no perpetual free tier. **Best for**: enterprises wanting a fully managed warehouse with broad ecosystem support.
+
+
+
+- **[Google BigQuery](https://cloud.google.com/bigquery)**
+
+  **Serverless data warehouse with on-demand and flat-rate pricing**. **Pricing**: **On-demand at $6.25 per TiB scanned**; **flat-rate editions** for predictable workloads. **Free tier**: **1 TiB of queries per month** and **10 GB of storage per month** for the lifetime of the project . **Best for**: teams wanting serverless analytics with a meaningful perpetual free tier.
+
+
+
+- **[Amazon Redshift](https://aws.amazon.com/redshift/)**
+
+  **Cloud data warehouse with provisioned and serverless options**. **Pricing**: **Provisioned starts at $0.543/hour**; **Redshift Serverless starts at $0.375 per RPU-hour** (60-second minimum), roughly **$1.50/hour at the 4-RPU base** . **Free tier**: **2-month free trial** with **$300 in credits** for provisioned clusters; Serverless has no perpetual free tier. **Best for**: AWS-native teams wanting a mature MPP warehouse.
+
+
+
+- **[Databricks SQL](https://www.databricks.com/)**
+
+  **Serverless and classic SQL warehouses on the lakehouse**. **Pricing**: **Serverless SQL at $0.70/DBU** (includes cloud instance cost) ; **Classic SQL** and **SQL Pro** tiers available at lower DBU rates with separate instance billing. **Free tier**: **14-day trial** with limited credits; **Community Edition** is free but limited to non-production use. **Best for**: teams already on Databricks wanting SQL analytics on Delta Lake.
+
+
+
+- **[Teradata Vantage](https://www.teradata.com/)**
+
+  **Enterprise MPP data warehouse**. **Pricing**: **Quote-only** via Teradata or Azure Marketplace; overage billed at **$0.01/unit** beyond contractual amount. **Free tier**: **Teradata Vantage Express** is a free, fully functional VM image for local testing and development ; **ClearScape Analytics Experience** provides a free hosted instance for testing . **Best for**: large enterprises with existing Teradata investments.
+
+
+
+## Open-Source GitHub Projects
+
+
+
+- **[Trino](https://github.com/trinodb/trino)**
+
+  **Distributed SQL query engine for big data** (Apache-2.0) — **the federated query standard**. **13,217 GitHub stars** . **Connects to 40+ data sources** including Hive, Iceberg, Delta Lake, PostgreSQL, MySQL, Kafka, and Elasticsearch—**query data where it lives without moving it**. **Release 484** (October 2026) adds **Parquet selected-positions pushdown** for selective filters, **S3 checksum configuration**, and **DuckDB/Elasticsearch connector improvements**. **The reference implementation for federated SQL**—**choose when you need to query across heterogeneous sources without ETL**.
+
+
+
+- **[Presto (PrestoDB)](https://github.com/prestodb/presto)**
+
+  **Distributed SQL query engine for big data** (Apache-2.0) — **the original Presto implementation**. **16,700+ GitHub stars** . **Created at Facebook** and now maintained by the Presto Foundation. **The trade-off**: **JVM-only stacks (including both Trino and Presto) are an order of magnitude slower than native engines like DuckDB and ClickHouse** for single-node analytics. **Best for**: teams already committed to the Presto ecosystem or needing Facebook-scale heritage.
+
+
+
+- **[Apache Calcite](https://github.com/apache/calcite)**
+
+  **Dynamic data management framework** (Apache-2.0) — **the SQL parser and optimizer beneath many engines**. Provides **SQL parsing, validation, and query optimization** for Trino, Dremio, and others. **Best for**: developers building custom query engines.
+
+
+
+- **[Apache Doris](https://github.com/apache/doris)**
+
+  **Real-time analytical database** (Apache-2.0) — **the MySQL-compatible OLAP choice**. **15,046 GitHub stars** . **Sub-second queries** on large datasets with lakehouse federation. **Best for**: real-time dashboards and interactive analytics.
+
+
+
+- **[DuckDB](https://github.com/duckdb/duckdb)**
+
+  **In-process analytical database** (MIT) — **the single-node benchmark leader**. **36,510 GitHub stars** . **Benchmarks show native/vectorized engines like DuckDB achieve substantially lower runtimes than JVM-only stacks** on single-node workloads. **Best for**: local analytics and embedded query workloads.
+
+
+
+- **[Velox](https://github.com/facebookincubator/velox)**
+
+  **C++ vectorized database acceleration library** (Apache-2.0) — **the engine behind Velox-accelerated Presto**. **4,200 GitHub stars** . Delivers order-of-magnitude speedups over JVM stacks. **Best for**: teams building or accelerating query engines.
+
+
+
+### Additional Strong Open-Source Options
+
+
+
+- **[StarRocks](https://github.com/StarRocks/starrocks)** — **High-performance OLAP database** (Apache-2.0). **Sub-second queries on data lake and warehouse** with materialized views and CBO optimizer. **Best for**: teams wanting fast queries directly on Iceberg/Delta/Hudi.
+
+- **[Apache Arrow](https://github.com/apache/arrow)** — **Columnar in-memory format** (Apache-2.0). **The data exchange standard** beneath DuckDB, Velox, and modern engines.
+
+- **[ClickHouse](https://github.com/ClickHouse/ClickHouse)** — **Column-oriented OLAP database** (Apache-2.0). **The fastest single-node analytics engine** in benchmark comparisons.
+
+- Community **n8n** workflows for query result alerting and analytics pipeline automation.
+
+
+
+**Frameworks for building custom systems**: Combine **Trino** for federated queries with **DuckDB** for single-node analytics, **Apache Doris** for real-time OLAP, and **Apache Calcite** for custom engine development—creating a comprehensive distributed SQL stack.
+
+
+
+## How to Contribute
+
+
+
+1. Fork the repo.
+
+2. Add/edit entries in `README.md` (follow existing format).
+
+3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
+
+4. Submit PR with a short explanation.
+
+
+
+Star the repo if you find it useful!
+
+
+
+## Disclaimer
+
+
+
+- This is a **community-curated** list — not exhaustive and not an endorsement.
+
+- Distributed SQL query engines handling enterprise data must comply with data protection regulations (GDPR, CCPA, etc.) and implement appropriate access controls.
+
+- **The "federated vs. warehouse" distinction matters.** **Trino, Presto, and Athena** query data where it lives—no ETL, no data movement. **Snowflake, BigQuery, Redshift, and Databricks SQL** are warehouses—they store and query data together, optimizing for their own storage format. **Choose federated engines when you have data sprawl; choose warehouses when you control the data lifecycle.**
+
+- **The JVM performance gap is real for single-node workloads.** **Benchmarks show native/vectorized engines (DuckDB, ClickHouse, Velox-Presto) deliver up to an order of magnitude lower runtimes than JVM-only stacks (Trino, Spark SQL)** on single-node analytics. **But for distributed, federated queries across petabytes, Trino's breadth of connectors and maturity often outweigh raw speed.**
+
+- **Starburst Galaxy's free tier is genuinely usable.** **3 clusters free forever** with standard execution mode . **The 30-day trial with $500 in credits** lets you evaluate Enterprise features without commitment. **Compare against Athena's $5/TB scanned model**—for moderate workloads, Galaxy's credit model may be more predictable.
+
+- **BigQuery's perpetual free tier is the most generous among warehouses.** **1 TiB of queries and 10 GB storage per month, forever** . **Redshift's 2-month trial with $300 credits** is time-bound. **Snowflake and Databricks offer trials only**—no perpetual free tier.
+
+- Self-hosted open-source solutions require proper cluster management, connector configuration, and ongoing maintenance. **Query engines are infrastructure**—budget for tuning and monitoring regardless of platform choice.
+
+
+
+---
+
+
+
+**Made for data engineers, analysts, and organizations building transparent distributed SQL solutions.**  
+
 Let's make Distributed SQL Query Engines more open, data-driven, and federated.
