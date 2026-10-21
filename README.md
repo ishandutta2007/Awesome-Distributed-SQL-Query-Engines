@@ -62,7 +62,7 @@ The sector is **moderately concentrated** at the top tier: hyperscale cloud prov
 
 ## 🔓 Open-Source GitHub Projects
 
-> 📌 *Sorted by **GitHub Stars** (descending). Badges reflect real-time stargazers count (`style=social`, `color=white`) and link directly to each project's stargazers page.*
+> 📌 *Sorted by **GitHub_Stars** (descending). Badges reflect real-time stargazers count (`style=social`, `color=white`) and link directly to each project's stargazers page.*
 
 - **[ClickHouse](https://github.com/ClickHouse/ClickHouse)** [![Stars](https://img.shields.io/github/stars/ClickHouse/ClickHouse?style=social&color=white)](https://github.com/ClickHouse/ClickHouse/stargazers) ⚡  
   **Column-oriented DBMS for real-time analytical reporting** (Apache-2.0). Widely recognized as one of the fastest open-source single-node and distributed analytics engines in hardware benchmark comparisons, delivering sub-second queries over billions of rows. **Best for**: real-time analytics, telemetry, log monitoring, and high-concurrency dashboards.
