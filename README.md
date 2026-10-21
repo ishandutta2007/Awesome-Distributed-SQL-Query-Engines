@@ -63,7 +63,7 @@ The global **data lake query engine market** is valued at approximately **$8.7 b
 
 ## 🔓 Open-Source GitHub Projects
 
-> 📌 *Sorted by GitHub Stars_Count (descending). Each badge links directly to that repository's stargazers page.*
+> 📌 *Sorted by GitHub_Stars_Count (descending). Each badge links directly to that repository's stargazers page.*
 
 - **ClickHouse** [![Stars](https://img.shields.io/github/stars/ClickHouse/ClickHouse?style=social&color=white)](https://github.com/ClickHouse/ClickHouse/stargazers) ⚡  
   **Column-oriented DBMS for real-time analytical reporting** (Apache-2.0). The fastest open-source single-node and distributed analytics engine in benchmark comparisons, delivering sub-second query performance over billions of rows. **Best for**: real-time analytics, telemetry, event logs, and high-concurrency dashboards.
