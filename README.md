@@ -163,3 +163,5 @@ Your encouragement and support keep this project accurate, fresh, and continuous
 
 **Made with ❤️ for data engineers, analysts, and organizations building high-performance distributed SQL query solutions.**  
 *Let's make Distributed SQL Query Engines more open, performant, and federated!* 🌐
+# Awesome-Distributed-SQL-Query-Engines
+
