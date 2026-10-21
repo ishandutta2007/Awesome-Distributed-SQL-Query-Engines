@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Disoord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Distributed-SQL-Query-Engines/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Distributed-SQL-Query-Engines?style=social" alt="GitHub stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Distributed-SQL-Query-Engines/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Distributed-SQL-Query-Engines?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Distributed-SQL-Query-Engines/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Distributed-SQL-Query-Engines?style=social" alt="GitHub forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Distributed-SQL-Query-Engines/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Distributed-SQL-Query-Engines" alt="License" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -63,7 +63,7 @@ The global **data lake query engine market** is valued at approximately **$8.7 b
 
 ## 🔓 Open-Source GitHub Projects
 
-> 📌 *Sorted by GitHub star count (descending). Each badge links directly to that repository's stargazers page.*
+> 📌 *Sorted by GitHub Stars_Count (descending). Each badge links directly to that repository's stargazers page.*
 
 - **ClickHouse** [![Stars](https://img.shields.io/github/stars/ClickHouse/ClickHouse?style=social&color=white)](https://github.com/ClickHouse/ClickHouse/stargazers) ⚡  
   **Column-oriented DBMS for real-time analytical reporting** (Apache-2.0). The fastest open-source single-node and distributed analytics engine in benchmark comparisons, delivering sub-second query performance over billions of rows. **Best for**: real-time analytics, telemetry, event logs, and high-concurrency dashboards.
